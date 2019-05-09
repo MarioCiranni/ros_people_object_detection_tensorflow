@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
 """
-Detector class to use TensorFlow detection API
+SOFAR PROJECT - Miro Project - Module 3 , RGB Recognition.
+Mario Ciranni       4112879
+Filippo Gandolfi    4112879
 
-The codes are from TensorFlow/Models Repo. I just transferred the code to
-ROS.
+We remodelled the code of Cagatay Odabasi, that we found on his github.
+This code is a detector class to use TensorFlow detection API.
 
-Cagatay Odabasi
+A previous and Tensorflow original versione is downloadable from TensorFlow/Models Repo.
+
+Then it was simply transferred to ROS.
 """
 
 import numpy as np
@@ -32,9 +36,10 @@ class Detector(object):
         ):
 
         super(Detector, self).__init__()
-        # What model to download.
+        # What model to download, linked to the param.yaml file
         self._model_name = model_name
         # ssd_inception_v2_coco_11_06_2017
+        # CHECK WHY v2 and not v1???
 
         self._num_classes = num_of_classes
 

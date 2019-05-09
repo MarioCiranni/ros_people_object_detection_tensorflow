@@ -130,7 +130,7 @@ class PeopleObjectDetectionNode(object):
                 self._detector.detect(cv_image)
 
 
-            # Create the message
+            # Create the message, CHECK HERE
             msg = \
                 utils.create_detection_msg(\
                 data, output_dict, category_index, self._bridge)
